@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Logo de Fish SMS para la pantalla principal. -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="48dp"
-    android:height="48dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-    <path
-        android:fillColor="#FFFF8600"
-        android:pathData="M4,54a50,50 0,1 0,100 0a50,50 0,1 0,-100 0z" />
-    <path
-        android:fillColor="#FFFFFFFF"
-        android:pathData="M28,54a21,14 0,1 0,42 0a21,14 0,1 0,-42 0z" />
-    <path
-        android:fillColor="#FFFFFFFF"
-        android:pathData="M66,54L84,40L84,68Z" />
-    <path
-        android:fillColor="#FFFF8600"
-        android:pathData="M36,50.5a3,3 0,1 0,6 0a3,3 0,1 0,-6 0z" />
-</vector>
+<!-- Logo oficial de Fish (client/public/icon-512.png de fish-system) sobre una
+     tarjeta blanca redondeada, para que se lea sobre el fondo oscuro.
+     Regla de marca: NUNCA dibujar un pez ni otro ícono propio; siempre el logo de Fish. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFFFF" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+    <item
+        android:bottom="10dp"
+        android:drawable="@drawable/fish_logo_mark"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp" />
+</layer-list>
