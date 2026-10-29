@@ -15,8 +15,9 @@ android {
         applicationId "la.getfish.sms"
         minSdk 21
         targetSdk 33
-        versionCode 1
-        versionName "1.0.0"
+        // En el repo: 1.0.0 (1). El workflow de release los sobreescribe desde el tag v*.
+        versionCode((System.getenv("VERSION_CODE") ?: "1").toInteger())
+        versionName(System.getenv("VERSION_NAME") ?: "1.0.0")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,7 +26,9 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file("keystore.jks")
+            // Sin secretos en el repo: el keystore y las claves llegan por variables de
+            // entorno (GitHub Actions, ver .github/workflows/release.yml).
+            storeFile file(System.getenv("SIGNING_KEYSTORE_PATH") ?: "keystore.jks")
             storePassword System.getenv("SIGNING_STORE_PASSWORD")
             keyAlias System.getenv("SIGNING_KEY_ALIAS")
             keyPassword System.getenv("SIGNING_KEY_PASSWORD")
