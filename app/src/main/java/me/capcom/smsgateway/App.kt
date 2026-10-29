@@ -9,6 +9,7 @@ import me.capcom.smsgateway.modules.connection.connectionModule
 import me.capcom.smsgateway.modules.device.deviceModule
 import me.capcom.smsgateway.modules.encryption.encryptionModule
 import me.capcom.smsgateway.modules.events.eventBusModule
+import me.capcom.smsgateway.modules.fish.fishModule
 import me.capcom.smsgateway.modules.gateway.GatewayService
 import me.capcom.smsgateway.modules.incoming.incomingModule
 import me.capcom.smsgateway.modules.localserver.localserverModule
@@ -59,6 +60,7 @@ class App: Application() {
                 connectionModule,
                 orchestratorModule,
                 deviceModule,
+                fishModule,
             )
         }
 

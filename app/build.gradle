@@ -127,6 +127,11 @@ dependencies {
 
     implementation 'com.googlecode.libphonenumber:libphonenumber:9.0.22'
 
+    // Lector de QR embebido, sin Google Play Services. zxing:core 3.3.0 mantiene
+    // compatibilidad con minSdk 21 (las 3.4+ requieren API 24 o desugaring).
+    implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
+    implementation 'com.google.zxing:core:3.3.0'
+
     // Koin for Android
     implementation "io.insert-koin:koin-android:$koin_version"
 

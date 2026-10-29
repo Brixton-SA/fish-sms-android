@@ -7,7 +7,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import me.capcom.smsgateway.MainActivity
+import me.capcom.smsgateway.AdvancedActivity
 import me.capcom.smsgateway.R
 
 class NotificationsService(
@@ -39,7 +39,7 @@ class NotificationsService(
 
     private val contentIntentFactories = mapOf(
         NOTIFICATION_ID_SMS_RECEIVED_WEBHOOK to { context: Context ->
-            MainActivity.starter(context, MainActivity.TAB_INDEX_SETTINGS)
+            AdvancedActivity.starter(context, AdvancedActivity.TAB_INDEX_SETTINGS)
         }
     )
 

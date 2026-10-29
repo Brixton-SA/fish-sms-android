@@ -68,7 +68,7 @@
     <string name="messages">Messages…</string>
     <string name="minimum">Minimum</string>
     <string name="n_a">n/a</string>
-    <string name="new_sms_received_webhooks_registered">New SMS Received Webhooks registered</string>
+    <string name="new_sms_received_webhooks_registered">Fish ya recibe los SMS que llegan a este celular</string>
     <string name="no_webhooks_found">No webhooks configured</string>
     <string name="not_registered">not registered</string>
     <string name="not_set">Not set</string>
@@ -219,4 +219,54 @@
     <string name="unregister_device">Unregister device</string>
     <string name="confirm_unregister_device">Are you sure you want to unregister this device?
         You will need to sign up or sign in again to use the cloud server.</string>
+
+    <!-- Fish SMS: pantalla principal y vinculación por QR -->
+    <string name="fish_home_title">Conectá este celular a Fish</string>
+    <string name="fish_home_subtitle">Así Fish envía y recibe SMS con el chip de este celular.</string>
+    <string name="fish_scan_qr">Escanear QR</string>
+    <string name="fish_scan_prompt">Apuntá la cámara al código QR que muestra Fish</string>
+    <string name="fish_steps_title">Cómo se conecta</string>
+    <string name="fish_step_1">1. En Fish, tocá «Conectar SMS».</string>
+    <string name="fish_step_2">2. Acá, tocá «Escanear QR» y apuntá la cámara al código.</string>
+    <string name="fish_step_3">3. Aceptá los permisos que pide el celular.</string>
+    <string name="fish_permissions_title">Permisos para tu chip</string>
+    <string name="fish_permissions_message">Para enviar y recibir SMS con este celular, Fish SMS te va a pedir permiso para usar los SMS, leer el número del chip y mostrar un aviso mientras está conectada.</string>
+    <string name="fish_continue">Continuar</string>
+    <string name="fish_cancel">Cancelar</string>
+    <string name="fish_connecting_title">Conectando…</string>
+    <string name="fish_pairing_step_claim">Validando el código…</string>
+    <string name="fish_pairing_step_register">Registrando este celular…</string>
+    <string name="fish_pairing_step_start">Activando el envío y la recepción de SMS…</string>
+    <string name="fish_pairing_step_complete">Terminando la conexión con Fish…</string>
+    <string name="fish_error_title">No pudimos conectar</string>
+    <string name="fish_error_invalid_code">Este código no es válido. Generá uno nuevo en Fish y volvé a escanearlo.</string>
+    <string name="fish_error_expired">El código venció. Generá uno nuevo en Fish y volvé a escanearlo.</string>
+    <string name="fish_error_already_used">Este código ya se usó. Generá uno nuevo en Fish y volvé a escanearlo.</string>
+    <string name="fish_error_rate_limited">Hubo muchos intentos seguidos. Esperá un minuto y volvé a escanear.</string>
+    <string name="fish_error_credentials">Fish no pudo validar este celular. Generá un código nuevo en Fish y volvé a escanear.</string>
+    <string name="fish_error_registration">No pudimos registrar este celular. Revisá que tenga internet y volvé a escanear.</string>
+    <string name="fish_error_network">Este celular no tiene conexión a internet. Conectate a wifi o a datos y volvé a escanear.</string>
+    <string name="fish_error_server">Fish no respondió como esperábamos. Probá de nuevo en unos minutos.</string>
+    <string name="fish_error_invalid_qr">Ese código no es de Fish. Escaneá el QR que aparece en Fish al tocar «Conectar SMS».</string>
+    <string name="fish_error_permissions">Fish SMS necesita permiso para enviar y recibir SMS. Volvé a escanear y tocá «Permitir» en cada pregunta.</string>
+    <string name="fish_error_unavailable">La conexión por QR no está disponible ahora. Probá más tarde.</string>
+    <string name="fish_error_channel_limit">Tu plan de Fish ya tiene todos los canales en uso. Liberá uno o mejorá el plan y volvé a escanear.</string>
+    <string name="fish_error_server_unavailable">No pudimos conectar con el servidor. Probá de nuevo.</string>
+    <string name="fish_error_complete_interrupted">Se cortó la conexión justo al terminar. Generá un QR nuevo en Fish y volvé a escanear.</string>
+    <string name="fish_rescan">Volver a escanear</string>
+    <string name="fish_retry">Reintentar</string>
+    <string name="fish_open_app_settings">Abrir ajustes de la app</string>
+    <string name="fish_connected_to">Conectado a %1$s</string>
+    <string name="fish_connected_generic">Conectado a Fish</string>
+    <string name="fish_connected_subtitle">Dejá la app instalada y el celular con internet: Fish envía y recibe los SMS por su cuenta.</string>
+    <string name="fish_service_active">Servicio activo</string>
+    <string name="fish_service_inactive">Servicio detenido</string>
+    <string name="fish_reactivate">Reactivar</string>
+    <string name="fish_battery_message">Para que el celular no corte la conexión, permití que Fish SMS funcione sin restricciones de batería.</string>
+    <string name="fish_battery_allow">Permitir</string>
+    <string name="fish_unpair">Desvincular</string>
+    <string name="fish_unpair_title">¿Desvincular este celular?</string>
+    <string name="fish_unpair_message">Fish va a dejar de enviar y recibir SMS con este chip. Para volver a conectarlo vas a necesitar un QR nuevo.</string>
+    <string name="fish_unpaired">Este celular ya no está conectado a Fish.</string>
+    <string name="fish_advanced">Opciones avanzadas</string>
 </resources>
