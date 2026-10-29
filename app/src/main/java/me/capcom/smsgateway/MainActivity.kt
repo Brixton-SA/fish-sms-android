@@ -19,13 +19,16 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
+import kotlinx.coroutines.launch
 import me.capcom.smsgateway.databinding.ActivityMainBinding
 import me.capcom.smsgateway.helpers.LocaleHelper
 import me.capcom.smsgateway.modules.fish.FishPairingException
 import me.capcom.smsgateway.modules.fish.FishPairingService
+import me.capcom.smsgateway.modules.fish.FishUpdateChecker
 import me.capcom.smsgateway.modules.fish.PairingLink
 import me.capcom.smsgateway.modules.gateway.GatewayService
 import org.koin.android.ext.android.inject
@@ -37,6 +40,7 @@ import org.koin.android.ext.android.inject
  * "Desvincular". También recibe los enlaces de vinculación
  * (https://app.getfish.la/sms/pair/<code> y fishsms://pair/<code>).
  * La configuración del proyecto original queda en el menú "Opciones avanzadas".
+ * Arriba de todo avisa cuando hay una versión nueva para descargar.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -44,6 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     private val pairingService: FishPairingService by inject()
     private val gatewayService: GatewayService by inject()
+    private val updateChecker: FishUpdateChecker by inject()
 
     /** Código recibido que espera la respuesta del pedido de permisos. */
     private var pendingCode: String? = null
@@ -81,6 +86,7 @@ class MainActivity : AppCompatActivity() {
         binding.buttonUnpair.setOnClickListener { confirmUnpair() }
         binding.buttonBattery.setOnClickListener { requestIgnoreBatteryOptimizations() }
         binding.buttonReactivate.setOnClickListener { pairingService.restartServices() }
+        binding.buttonUpdate.setOnClickListener { openDownload() }
 
         pairingService.state.observe(this) { render() }
         gatewayService.isActiveLiveData(this).observe(this) { active ->
@@ -91,6 +97,8 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             handleIntent(intent)
         }
+
+        checkForUpdate()
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -355,6 +363,19 @@ class MainActivity : AppCompatActivity() {
             } catch (_: ActivityNotFoundException) {
                 // El fabricante no expone la pantalla; la tarjeta sigue visible.
             }
+        }
+    }
+
+    private fun checkForUpdate() {
+        lifecycleScope.launch {
+            binding.layoutUpdate.isVisible = updateChecker.availableUpdate() != null
+        }
+    }
+
+    private fun openDownload() {
+        try {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(FishUpdateChecker.DOWNLOAD_URL)))
+        } catch (_: ActivityNotFoundException) {
         }
     }
 

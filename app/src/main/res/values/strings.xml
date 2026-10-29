@@ -269,4 +269,6 @@
     <string name="fish_unpair_message">Fish va a dejar de enviar y recibir SMS con este chip. Para volver a conectarlo vas a necesitar un QR nuevo.</string>
     <string name="fish_unpaired">Este celular ya no está conectado a Fish.</string>
     <string name="fish_advanced">Opciones avanzadas</string>
+    <string name="fish_update_message">Hay una versión nueva de Fish SMS. Se instala encima y el celular sigue conectado.</string>
+    <string name="fish_update_action">Actualizar</string>
 </resources>

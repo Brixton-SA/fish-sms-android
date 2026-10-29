@@ -11,4 +11,5 @@ val fishModule = module {
         )
     }
     singleOf(::FishPairingService)
+    singleOf(::FishUpdateChecker)
 }
