@@ -44,8 +44,23 @@ class GatewaySettings(
     val privateToken: String?
         get() = storage.get<String>(PRIVATE_TOKEN)
 
+    // Fish SMS no incluye Firebase Cloud Messaging: el único transporte es SSE.
     val notificationChannel: NotificationChannel
-        get() = storage.get<NotificationChannel>(NOTIFICATION_CHANNEL) ?: NotificationChannel.AUTO
+        get() = NotificationChannel.SSE_ONLY
+
+    /**
+     * Configura el servidor privado recibido al vincular el dispositivo con Fish.
+     * Fuerza SSE como canal de notificaciones.
+     */
+    fun configureServer(url: String, token: String) {
+        if (!url.startsWith("https://")) {
+            throw IllegalArgumentException("url must start with https://")
+        }
+
+        storage.set(CLOUD_URL, url)
+        storage.set(PRIVATE_TOKEN, token)
+        storage.set(NOTIFICATION_CHANNEL, NotificationChannel.SSE_ONLY.name)
+    }
 
     companion object {
         private const val REGISTRATION_INFO = "REGISTRATION_INFO"

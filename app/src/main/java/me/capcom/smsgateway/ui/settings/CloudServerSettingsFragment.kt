@@ -193,7 +193,7 @@ class CloudServerSettingsFragment : BasePreferenceFragment() {
     // `push_token` from the update, so it answers 204 without changing anything, and the
     // only destructive alternative (deleting the device row) cascades to its messages,
     // webhooks and inbox rows. Consequence: the server can still push to this device for
-    // the old registration once the user registers again. PushService and the receiver-side
+    // the old registration once the user registers again. The SSE stream and the receiver-side
     // MessagesExportRequested collector drop commands while `registrationInfo == null`,
     // which covers the unregistered window but not the re-registered one. Closing that
     // needs a server contract change; do not read the toast as "server-side revoked".

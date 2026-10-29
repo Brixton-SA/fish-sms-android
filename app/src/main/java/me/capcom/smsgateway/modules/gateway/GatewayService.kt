@@ -15,6 +15,7 @@ import me.capcom.smsgateway.modules.gateway.inbox.InboxUploadService
 import me.capcom.smsgateway.modules.gateway.inbox.InboxUploadWorker
 import me.capcom.smsgateway.modules.gateway.services.SSEForegroundService
 import me.capcom.smsgateway.modules.gateway.workers.PullMessagesWorker
+import me.capcom.smsgateway.modules.gateway.workers.RegistrationWorker
 import me.capcom.smsgateway.modules.gateway.workers.SendStateWorker
 import me.capcom.smsgateway.modules.gateway.workers.SettingsUpdateWorker
 import me.capcom.smsgateway.modules.gateway.workers.WebhooksUpdateWorker
@@ -26,7 +27,6 @@ import me.capcom.smsgateway.modules.messages.MessagesSettings
 import me.capcom.smsgateway.modules.messages.data.SendParams
 import me.capcom.smsgateway.modules.messages.data.SendRequest
 import me.capcom.smsgateway.modules.receiver.data.InboxMessage
-import me.capcom.smsgateway.services.PushService
 import java.util.Date
 
 class GatewayService(
@@ -51,7 +51,9 @@ class GatewayService(
     fun start(context: Context) {
         if (!settings.enabled) return
 
-        PushService.register(context)
+        // Fish SMS no usa Firebase: sin push token, el dispositivo se actualiza en el
+        // servidor y las órdenes llegan por SSE (DeviceRegisteredEvent -> SSEForegroundService).
+        RegistrationWorker.start(context, null)
         PullMessagesWorker.start(context)
         WebhooksUpdateWorker.start(context)
         SettingsUpdateWorker.start(context)
