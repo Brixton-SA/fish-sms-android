@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fish SMS: pez blanco simple sobre el naranja de Fish (#FF8600). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M28,54a21,14 0,1 0,42 0a21,14 0,1 0,-42 0z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M66,54L84,40L84,68Z" />
+    <path
+        android:fillColor="#FFFF8600"
+        android:pathData="M36,50.5a3,3 0,1 0,6 0a3,3 0,1 0,-6 0z" />
+</vector>

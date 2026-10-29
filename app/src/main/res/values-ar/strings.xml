@@ -100,7 +100,6 @@
     <string name="sign_up">إنشاء حساب</string>
     <string name="signing_key">مفتاح التوقيع</string>
     <string name="sms_gateway_is_running_on_port">SMSGate يعمل على المنفذ %1$d</string>
-    <string name="sms_gateway">SMSGate</string>
     <string name="success_long_press_to_copy">نجاح، اضغط مطولاً للنسخ</string>
     <string name="system">النظام</string>
     <string name="tab_text_home">الرئيسية</string>

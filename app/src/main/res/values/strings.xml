@@ -2,7 +2,7 @@
     <string name="address_is">%1$s</string>
     <string name="api_url_private_token_credentials_etc">API URL, private token, credentials, etc.</string>
     <string name="api_url">API URL</string>
-    <string name="app_name" translatable="false">SMSGate</string>
+    <string name="app_name" translatable="false">Fish SMS</string>
     <string name="app_version_build">App version (build)</string>
     <string name="automatic_key_rotation">Automatic key rotation</string>
     <string name="battery_optimization_already_disabled">Battery optimization already disabled</string>
@@ -54,10 +54,10 @@
         be between 1024 and 65535.</string>
     <string name="limits">Limits</string>
     <string name="list_of_last_50_log_entries">List of last 50 log entries</string>
-    <string name="listening_to_the_server_events">Listening to server events…</string>
+    <string name="listening_to_the_server_events">Conectado a Fish. Listo para enviar y recibir SMS.</string>
     <string name="local_address">Local address</string>
     <string name="local_server_dotdotdot">Local Server…</string>
-    <string name="local_sms_gateway_notifications">Local SMSGate notifications</string>
+    <string name="local_sms_gateway_notifications">Estado de la conexión de Fish SMS</string>
     <string name="local">Local</string>
     <string name="login_code_expires">Login Code, expires %1$s</string>
     <string name="login_code">Login Code</string>
@@ -118,7 +118,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="signing_key">Signing Key</string>
     <string name="sms_gateway_is_running_on_port">SMSGate is running on port %1$d</string>
-    <string name="sms_gateway">SMSGate</string>
+    <string name="sms_gateway" translatable="false">Fish SMS</string>
     <string name="sms" translatable="false">sms</string>
     <string name="success_long_press_to_copy">Success, long press to copy</string>
     <string name="system">System</string>

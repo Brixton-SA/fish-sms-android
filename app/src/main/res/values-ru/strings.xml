@@ -100,7 +100,6 @@
     <string name="sign_up">Зарегистрироваться</string>
     <string name="signing_key">Ключ подписи</string>
     <string name="sms_gateway_is_running_on_port">SMS шлюз работает на порту %1$d</string>
-    <string name="sms_gateway">SMSGate</string>
     <string name="success_long_press_to_copy">Успешно, нажмите и удерживайте для копирования</string>
     <string name="system">Система</string>
     <string name="tab_text_home">Главная</string>

@@ -92,7 +92,6 @@
     <string name="sign_up">注册</string>
     <string name="signing_key">签名密钥</string>
     <string name="sms_gateway_is_running_on_port">短信网关已在端口 %1$d 运行</string>
-    <string name="sms_gateway">短信网关</string>
     <string name="success_long_press_to_copy">成功，长按可复制</string>
     <string name="system">系统</string>
     <string name="tab_text_home">首页</string>

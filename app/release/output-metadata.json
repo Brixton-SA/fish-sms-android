@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "me.capcom.smsgateway",
+  "applicationId": "la.getfish.sms",
   "variantName": "release",
   "elements": [
     {

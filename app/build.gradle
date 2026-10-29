@@ -13,7 +13,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "me.capcom.smsgateway"
+        applicationId "la.getfish.sms"
         minSdk 21
         targetSdk 33
         versionCode 1

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="fish_orange">#FFFF8600</color>
+    <color name="fish_orange_dark">#FFD96F00</color>
+    <color name="fish_green">#FF2E7D32</color>
     <color name="grey_700">#FF616161</color>
     <color name="progressBarOverlay">#33FFFFFF</color>
     <color name="purple_200">#FFBB86FC</color>

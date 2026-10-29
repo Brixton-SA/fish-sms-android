@@ -1,0 +1,22 @@
+Fish SMS
+Copyright 2026 Brixton Capital S.A.
+
+Este producto es un fork de "SMS Gateway for Android" (android-sms-gateway),
+https://github.com/capcom6/android-sms-gateway
+Copyright Aleksandr Soloshenko y colaboradores.
+Distribuido bajo la Licencia Apache, Versión 2.0 (ver el archivo LICENSE).
+
+Cambios realizados en este fork (resumen):
+- Identificador de aplicación la.getfish.sms, nombre "Fish SMS" e ícono propio.
+- Se quitó Firebase (Cloud Messaging): las órdenes del servidor llegan siempre
+  por Server-Sent Events (SSE).
+- Pantalla de inicio nueva: vinculación con Fish escaneando un código QR
+  (lector embebido) o abriendo un enlace https://app.getfish.la/sms/pair/<código>
+  o fishsms://pair/<código>. La configuración original quedó en
+  "Opciones avanzadas".
+- Textos de la interfaz principal en español.
+- Workflows de GitHub Actions propios para compilar y publicar el APK firmado.
+
+This product includes software developed as part of zxing-android-embedded
+(https://github.com/journeyapps/zxing-android-embedded) and ZXing
+(https://github.com/zxing/zxing), both under the Apache License, Version 2.0.
